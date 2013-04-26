@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="plunker" >
+<head>
+  <meta charset="utf-8">
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">  <title>AngularJS Plunker</title>
+  
+  <script>document.write('<base href="' + document.location + '" />');</script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+  <script src="app.js"></script>
+  <script>
+  function MyController($scope) {
+    $scope.msg = ["mongo","moco"];
+    $scope.uni = "UPRRP";
+  }
+  </script>
+  
+</head>
+<body ng-controller="MyController">
+  Hello {{uni}}!
+  <br>
+  <input type="text" ng-model ="yourName" placeholder="Enter a name here">
+  <p>
+    {{yourName}} you are awesome!!!
+  </p>
+  
+  <li ng-repeat="v in msg">
+    {{v}}
+  </li>
+  
+</body>
+</html>
